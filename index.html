@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <title>tres cards</title>
+    <style>
+      /* Estilos para la barra de navegación */
+      nav {
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+      nav a {
+        color: white;
+        display: block;
+        float: left;
+        font-size: 16px;
+        padding: 14px 16px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.5s ease;
+      }
+      nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+  
+      /* Animación para la barra de navegación */
+      nav.scroll {
+        background-color: #333;
+        animation: fadeInDown 0.5s;
+        position: fixed;
+        top: -50px;
+        width: 100%;
+        z-index: 1;
+      }
+      nav.scroll a {
+        padding: 10px 16px;
+      }
+      nav.scroll a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+  
+      @keyframes fadeInDown {
+        0% {
+          top: -50px;
+        }
+        100% {
+          top: 0;
+        }
+      }
+          body{
+              align-items: center;
+          }
+    </style>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Acerca de</a>
+      <a href="#">Servicios</a>
+      <a href="#">Contacto</a>
+    </nav>
+  
+    <!-- Contenido de la página -->
+    <div style="padding-top: 80px;">
+      <h1>Bienvenidos</h1>
+      <p>Este es el contenido de la página.</p>
+    </div>
+  
+    <script>
+      // Animación para la barra de navegación cuando se hace scroll
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          document.getElementsByTagName("nav")[0].classList.add("scroll");
+        } else {
+          document.getElementsByTagName("nav")[0].classList.remove("scroll");
+        }
+      }
+    </script>
+    
+</head>
+<body>
+    <section class="tarjetas">
+  <div class="tarjeta">
+    <img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/333804258_212422148026669_342824453625195202_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGyVq5sseBR2rCJW_j0PD6edNo3zFu50t102jfMW7nS3WewvRrV9uWDP_opOPPvILUEhs2pBS2GaA_K-7swOwWH&_nc_ohc=Q4ffzcXYu2oAX-9i2Zx&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfAwBKCx_mgWgfi3ZbPFdCaBDxnFdbR5HqdRQiiV7FbBYQ&oe=640444E8" alt="hamburgesa">
+    <h2>San Francisco Giants Throwback 59Fifty Cerrada</h2>
+    <p class="precio">$900</p>
+    <ul>
+      <li>Esta gorra New Era 59Fifty de San Francisco Giants de la colección Throwback presenta el logo de los Giants bordado en los paneles frontales a juego con un gráfico de la silueta del estado del equipo y el logo de la liga correspondiente. Detalles adicionales incluyen gráficos borados del equipo en el undervisor. Cómprala ya.</li>
+      
+      
+    </ul>
+    <button id="miBoton">Agregar al carrito</button>
+
+  </div>
+  <div class="tarjeta">
+    <img src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/325300738_508411221277374_7279862568071163822_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeFWuvYDs0WtOU0tIYcc35TedhJdSEYpSK92El1IRilIr5gzdJp_-Iwt2amd63b4rNx10XGkdKMQ4qazNhJUJiNG&_nc_ohc=ZZ91vp7OrrAAX__MSHx&_nc_ht=scontent.fgdl9-1.fna&oh=00_AfBpyATFb8Bwf3BvPGi8bkenWwknMV0GrSENBSrZI1jyEg&oe=640401E3" alt="platillo">
+    <h2>Jordan 1 Retro blue</h2>
+    <p class="precio">$2900</p>
+    <ul>
+      <li>AIR JORDAN 1 RETRO HIGH OG TRUE BLUE</li>
+    
+    </ul>
+    <button id="miBoton1">Agregar al carrito</button>
+  </div>
+  <div class="tarjeta">
+    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fboutiqueelmachin%2Fvideos%2F585477729860293%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"  alt="Imagen del producto"></iframe>
+       <h2>Jordan 1 Retro Black</h2>
+    <p class="precio">$2800</p>
+    <ul>
+      <li>Jordan 1 Retro Black White (2014)</li>
+      
+    </ul>
+    <button id="miBoton2">Agregar al carrito</button>
+  </div>
+</section>
+<script src="scripts.js"></script>
+</body>
+</html>
